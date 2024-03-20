@@ -40,7 +40,7 @@ func main() {
 	}
 	var source = string(bytes)
 	var parser = pac.Parser().Make()
-	var package_ = parser.ParseSource(source)
+	var model = parser.ParseSource(source)
 	var validator = pac.Validator().Make()
-	validator.ValidatePackage(package_)
+	validator.ValidateModel(model)
 }

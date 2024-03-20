@@ -40,11 +40,11 @@ func main() {
 	}
 	var source = string(bytes)
 	var parser = pac.Parser().Make()
-	var package_ = parser.ParseSource(source)
+	var model = parser.ParseSource(source)
 
 	// Reformat the package file.
 	var formatter = pac.Formatter().Make()
-	source = formatter.FormatPackage(package_)
+	source = formatter.FormatModel(model)
 	bytes = []byte(source)
 	err = osx.WriteFile(packageFile, bytes, 0644)
 	if err != nil {
