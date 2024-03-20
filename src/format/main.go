@@ -33,7 +33,7 @@ func main() {
 	if !sts.HasSuffix(directory, "/") {
 		directory += "/"
 	}
-	var packageFile = directory + "Model.go"
+	var packageFile = directory + "Package.go"
 	var bytes, err = osx.ReadFile(packageFile)
 	if err != nil {
 		panic(err)
